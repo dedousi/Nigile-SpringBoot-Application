@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+   <meta charset="UTF-8"/>
+   <title>Homepage</title>
+</head>
+<body>
+
+    <!-- skyscraper tiles background for the whole page. -->
+    <body th:style="'background: url(images/bg.png)'"></body>
+
+    <style>
+        /* borders of page */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* menu bar - side navigation feature */
+        .menu {
+            height: 100%;
+            width: 300px;
+            opacity: 0.9;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: black;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        /* for the contents - links */
+        .menu a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        /* mouse over navigation links -> change their color */
+        .menu a:hover{
+            color:red;
+        }
+
+        .main {
+            margin-left: 300px;
+            padding: 0px 20px;   
+        }
+
+    </style>
+
+    <!-- text main body -->
+    <div class="main" style="font-family:sans-serif; color:white;">
+        <h1> Welcome to "NiGiLe" </h1>
+        <p> 
+        This is a website for the professors to login and register.
+        The project was made for professors to keep in track with their 
+        classes, students and grades.
+        </p>
+        <p>
+        After the login or registration the professor will be redirected to his 
+        profile and from then on he will be able to manage all sorts of things.
+        </p><br>
+        <p style = "color: rgb(88, 88, 255)"> 
+        <b>Are you an admin with an account already? Then proceed in the login option.</b><br>
+        <b>Are you an admin with no account? Register in the Admin Registration option with the special key given to you by the administration office.</b>
+        </p>
+        <p style="color:red; position:fixed; bottom: 0px; "><small><i>
+        NiGiLe: A Software Engineering project made by 4348-4488-4500.
+        -- (Ni) Nikos, (Gi) Giorgos, (Le) Lemonia.
+        </i></small></p>
+    </div>
+
+    <!-- menu bar -->
+    <div class ="menu" style="overflow:auto; font-family:sans-serif;">
+        <!-- nigile project logo -->
+        <img src="../static/images/nigile-logo.png" alt="Nigile logo" align="left" width="300" height="300" position="fixed" th:src="@{/images/nigile-logo.png}">
+        
+        <!-- links -->
+        <a href="https://www.google.com/">Google</a>
+        <a href="https://www.cs.uoi.gr/">University Of Ioannina</a>
+    
+        <!-- sign up and login features. -->
+        <a href="http://localhost:8080/register">Sign Up Here</a>
+        <a href="http://localhost:8080/login">Login Here</a>
+        <a href="http://localhost:8080/registerAdmin">Admin Registration</a>
+        <a href="http://localhost:8080/login"></a>
+    </div>
+</body>
+</html>
